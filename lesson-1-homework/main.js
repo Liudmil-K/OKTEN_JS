@@ -1,4 +1,5 @@
 // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+//     Вивести кожну змінну за допомогою: console.log , alert, document.write
     let str0 = `Hello`;
     let str1 = `owu`;
     let str2 = `com`;
@@ -12,11 +13,11 @@
     let num6 = 16;
     let bool1 = true;
     let bool0 = false;
-//     Вивести кожну змінну за допомогою: console.log , alert, document.write
     console.log(str0+'! Welcome to the site: '+str1+'.'+str2+'.'+str3+'. T: '+num0+num1+num2+num3+num4+num5+num6+'. Here you will learn what is '+bool1+' and what is '+bool0+'!');
     alert(str0+', on the site '+str1+'.'+str2+'.'+str3+' your API: '+num0+num1+num2+num3+num4+num5+num6+'. '+bool1+' or '+bool0+'?');
     document.write("<h2>" + str0 + "!</h2><h1>" + str1 + "." + str2 + "." + str3 + "</h1><p>Call us " + num0 + num1 + num2 + num3 + num4 + num5 + num6 + ".</p><p>" + bool1 + "</p><p>" + bool0 + "</p>");
 // - Переприсвоїти кожній змінній з завдання значення на довільне.
+//     Вивести кожну змінну за допомогою: console.log , alert, document.write
     str0 = `JavaScript`;
     str1 = `is the`;
     str2 = `programming`;
@@ -30,7 +31,6 @@
     num6 = 8;
     bool1 = 'Yes';
     bool0 = 'No';
-//     Вивести кожну змінну за допомогою: console.log , alert, document.write
     console.log(str0+' '+str1+' '+str2+' '+str3+' of the Web. T: '+num0+num1+num2+num3+num4+num5+num6+'. Call now '+bool1+' or '+bool0+'?');
     alert(str0+' '+str1+' world\'s most popular '+str2+' '+str3+'. Now your API: '+num4+num5+num6+num0+num1+num2+num3+'. '+bool1+' or '+bool0+'?');
     document.write("<h1>" + str0 + " " + str1 + " " + str2 + " " + str3 + "</h1><p>Call us " + num0 + num1 + num2 + num3 + num4 + num5 + num6 + ".</p><p>" + bool1 + "</p><p>" + bool0 + "</p>");
@@ -40,10 +40,10 @@
     let lastName = `Liudmila`;
     let person = (firstName+` `+lastName+` `+middleName);
 // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+//     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
     let last = prompt("What is your name?", "Name"),
         middle = prompt('What is your middle name?', `MiddleName`),
         age = prompt('How old are you?', 100);
-//     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
     alert(`Вітаю, ${last} ${middle}! Тобі ${age} років.`);
 // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
     let a = 100;
