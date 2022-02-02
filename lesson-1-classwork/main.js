@@ -22,41 +22,66 @@
         array[7]+
         array[8]+
         array[9];
-    console.log(array + ' => сума масиву = ' +result)
+    console.log(array + ' => сума масиву = ' +result);
 
 // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
-    let book = [
+    let book1 = [
         {
             title: 'Книга JavaScript. Полное руководство. 7-е издание',
-            price: 722,
-            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+            page: 722,
+            genre: 'Програмування'
         },
         {
-            title: 'juice',
-            price: 27,
-            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+            title: 'Книга Мистецтво говорити. Таємниці ефективного спілкування',
+            price: 304,
+            genre: 'Психологія'
         },
         {
-            title: 'tomato',
-            price: 47,
-            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
-        },
-        {
-            title: 'tea',
-            price: 15,
-            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+            title: 'Книга Усе побачиш, коли пригальмуєш. Правила виживання у метушливому світі',
+            price: 232,
+            genre: 'Психологія'
         },
         ];
 
 // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+let book = [
+    {
+        title: "Книга JavaScript. Полное руководство. 7-е издание",
+        page: 722,
+        genre: 'Програмування',
+        autor: 'Девід Фленаган'
+    },
+    {
+        title: 'Книга Мистецтво говорити. Таємниці ефективного спілкування',
+        page: 304,
+        genre: 'Психологія',
+        autor: 'Джеймс Борг'
+    },
+    {
+        title: 'Книга Усе побачиш, коли пригальмуєш. Правила виживання у метушливому світі',
+        page: 232,
+        genre: 'Психологія',
+        autor: 'Гемін Сунім'
+    },
+];
 
 // 4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори.
 // Вивести кожну книгу як окремий об'єкт
+    for (const books of book) {
+        document.write(
+            `<h2>${books.title}</h2>
+                <p>Кількість сторінок: ${books.page}
+                <br>Жанр: ${books.genre}
+                <br>Автор: ${books.autor}</p>`)
+}
 
 // 5. Напишіть код, який вираховує площ
 // прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
 // Значення площі зберігати в змінній s.
-
+    let height = 23;
+    let width = 10;
+    let s = height * width;
+    console.log ('Площа прямокутника - ' + s);
 // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC)
 // та діаметром основи 4м (dC), результат помістіть у змінну v.
 
