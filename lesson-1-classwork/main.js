@@ -94,7 +94,7 @@
     const pi = 3.1415;
     let heightC = 10;
     let dC = 4;
-    let v = (pi * heightC * dC);
+    let v = (pi * Math.pow((dC/2), 2) * heightC);
     console.log ('Об\'єм циліндра - ' + v);
 
 // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
