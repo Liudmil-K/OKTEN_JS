@@ -56,29 +56,111 @@ document.write(`<div><h3>20 блоків h1 з індексом</h3>`);
 let hi = 0;
 let hii = 1;
 while (hi < 20)
-{
-    document.write(`<h1 class="reduction">Нумерований блок №${hii}</h1>`);
-    hi++;
-    hii++;
-}
+    {
+        document.write(`<h1 class="reduction">Нумерований блок №${hii}</h1>`);
+        hi++;
+        hii++;
+    }
 document.write(`</div></div>`);
 
 // 7)- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
-let numers = []
-console.log(numers);
+
+let numers =
+    [
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100),
+        Math.round(Math.random() * 100)
+    ];
+for (i = 0; i < numers.length; i++)
+    {
+        console.log(numers[i]);
+    }
 
 // 8) Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+
+let strings =
+    [
+        "Людмила Олександрівна",
+        "Оксана Миколаївна",
+        "Богдан Володимирович",
+        "Яна Михайлівна",
+        "Зиновій Богданович",
+        "Клара Михайлівна",
+        "Олег Анатолійович",
+        "Христина Макарівна",
+        "Арсеній Евгенович",
+        "Динис Петрович"
+    ];
+for (i = 0; i < strings.length; i++)
+{
+    console.log(strings[i]);
+}
+
 // 9) Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+
+let mixes =
+    [
+        "Англійська мова",
+        56834211,
+        47358,
+        5>6,
+        true,
+        "Математика",
+        "Економіка",
+        false,
+        "Китайська мова",
+        NaN
+    ];
+for (i = 0; i < mixes.length; i++)
+{
+    console.log(mixes[i]);
+}
 
 // 10) Створити масив з 10 елементів числового, стірчкового і булевого типу.
 // За допомогою if та typeof вивести тільки булеві елементи
+
+for (i = 0; i < mixes.length; i++)
+    {
+        if (typeof mixes[i] === 'boolean')
+        {
+            console.log(mixes[i]);
+        }
+    }
+
 // 11) Створити масив з 10 елементів числового, стірчкового і булевого типу.
 // За допомогою if та typeof вивести тільки числові елементи
+
+for (i = 0; i < mixes.length; i++)
+{
+    if (typeof mixes[i] === 'number')
+    {
+        console.log(mixes[i]);
+    }
+}
+
 // 12) Створити масив з 10 елементів числового, стрічкового і булевого типу.
 // За допомогою if та typeof вивести тільки рядкові елементи
 
+for (i = 0; i < mixes.length; i++)
+{
+    if (typeof mixes[i] === 'string')
+    {
+        console.log(mixes[i]);
+    }
+}
+
 // 13) Створити порожній масив. Наповнити його 10 елементами (різними за типами)
 // через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+
+
 // 14) Створити цикл for на 10  ітерацій з кроком 1.
 // Вивести поточний номер кроку через console.log та document.write
 // 15) Створити цикл for на 100 ітерацій з кроком 1.
