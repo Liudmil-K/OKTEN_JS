@@ -99,9 +99,9 @@ let strings =
         "Динис Петрович"
     ];
 for (i = 0; i < strings.length; i++)
-{
-    console.log(strings[i]);
-}
+    {
+        console.log(strings[i]);
+    }
 
 // 9) Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
 
@@ -119,9 +119,9 @@ let mixes =
         NaN
     ];
 for (i = 0; i < mixes.length; i++)
-{
-    console.log(mixes[i]);
-}
+    {
+        console.log(mixes[i]);
+    }
 
 // 10) Створити масив з 10 елементів числового, стірчкового і булевого типу.
 // За допомогою if та typeof вивести тільки булеві елементи
@@ -129,36 +129,53 @@ for (i = 0; i < mixes.length; i++)
 for (i = 0; i < mixes.length; i++)
     {
         if (typeof mixes[i] === 'boolean')
-        {
-            console.log(mixes[i]);
-        }
+            {
+                console.log(mixes[i]);
+            }
     }
 
 // 11) Створити масив з 10 елементів числового, стірчкового і булевого типу.
 // За допомогою if та typeof вивести тільки числові елементи
 
 for (i = 0; i < mixes.length; i++)
-{
-    if (typeof mixes[i] === 'number')
     {
-        console.log(mixes[i]);
+        if (typeof mixes[i] === 'number')
+            {
+                console.log(mixes[i]);
+            }
     }
-}
 
 // 12) Створити масив з 10 елементів числового, стрічкового і булевого типу.
 // За допомогою if та typeof вивести тільки рядкові елементи
 
 for (i = 0; i < mixes.length; i++)
-{
-    if (typeof mixes[i] === 'string')
     {
-        console.log(mixes[i]);
+        if (typeof mixes[i] === 'string')
+            {
+                console.log(mixes[i]);
+            }
     }
-}
 
 // 13) Створити порожній масив. Наповнити його 10 елементами (різними за типами)
 // через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
 
+let mixArrey [];
+mixArrey[0] = false;
+mixArrey[1] = 1;
+mixArrey[2] = 'людини';
+mixArrey[3] = 'робота';
+mixArrey[4] = 'для';
+mixArrey[5] = 2;
+mixArrey[6] = 5>1;
+mixArrey[7] = 'програмістів';
+mixArrey[8] = 'зроблять';
+mixArrey[9] = {};
+console.log(mixArrey);
+
+for (a = 0; a < 10; a++)
+{
+    console.log(mixArrey[a]);
+}
 
 
 // 14) Створити цикл for на 10  ітерацій з кроком 1.
