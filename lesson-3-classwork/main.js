@@ -59,12 +59,12 @@ for (let i = 0; i < mainArray.length; i++) {
 
 // 7. замінити кожне число кратне 3 на слово "okten"
 
-// console.log('for парні значення');
-// for (let i = 0; i < mainArray.length; i++) {
-//     if (mainArray[i] % 2 === 0) {
-//         console.log(mainArray[i]);
-//     }
-// }
+console.log('for парні значення');
+for (let i = 0; i < mainArray.length; i++) {
+    if (mainArray[i] % 2 === 0) {
+        console.log(mainArray[i]);
+    }
+}
 
 
 // //0) Зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]:
