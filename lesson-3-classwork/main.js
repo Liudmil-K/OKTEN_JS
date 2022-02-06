@@ -7,7 +7,7 @@ let mainArray = [2,17,13,6,22,31,45,66,100,-18];
 console.log('перебрати його циклом while');
 let j = 0;
 while (j < mainArray.length) {
-    let mainArr = mainArray[j];
+    let mainArrayElement = mainArray[j];
     console.log(mainArray[j]);
     j++;
 }
@@ -24,7 +24,7 @@ for (let i = 0; i < mainArray.length; i++) {
 console.log('while з непарним індексом');
 let i = 1;
 while (i < mainArray.length) {
-    let mainArr = mainArray[i];
+    let mainArrayElement = mainArray[i];
     console.log(mainArray[i]);
     i+=2;
 }
@@ -42,7 +42,7 @@ console.log('while парні значення');
 let x = 0;
 while (x < mainArray.length) {
     if (mainArray[x] % 2 === 0) {
-        let mainArr = mainArray[x];
+        let mainArrayElement = mainArray[x];
         console.log(mainArray[x]);
     }
     x++;
@@ -80,7 +80,7 @@ for (let i = reverseArray.length-1; i >= 0; i--) {
 document.write('<h2>while в зворотньому порядку</h2>');
 let z = reverseArray.length-1;
 while (z >= 0) {
-    let mainArr = reverseArray[z];
+    let reverseArrayElement = reverseArray[z];
     document.write(`<p>${reverseArray[z]}</p>`);
     z--;
 }
@@ -97,7 +97,7 @@ for (let i = reverseArray.length-1; i >= 0; i--) {
 document.write('<h2>while з непарним індексом в зворотньому порядку</h2>');
 let c = reverseArray.length-1;
 while (c >= 0) {
-    let mainArr = reverseArray[c];
+    let reverseArrayElement = reverseArray[c];
     document.write(`<p>${reverseArray[c]}</p>`);
     c-=2;
 }
@@ -115,7 +115,7 @@ document.write('<h2>while парні значення в зворотньому 
 let y = reverseArray.length-1;
 while (y >= 0) {
     if (reverseArray[x] % 2 === 0) {
-        let mainArr = reverseArray[y];
+        let reverseArrayElement = reverseArray[y];
         document.write(`<p>${reverseArray[y]}</p>`);
     }
     y--;
