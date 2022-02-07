@@ -82,6 +82,25 @@ function arrayMix (...abc) {
 let array = [100, 'дата народження', false, 467, 'продовження'];
 arrayMix (array);
 
-// 9) створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+// 9) створити функцію яка приймає масив об'єктів з наступними полями id,name,age ,
+// та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-
+function objectArray(object) {
+    document.write(`<h2>Картки клієнтів:</h2>`);
+    for (const objectElement of object) {
+        document.write(`
+            <div class="flex"><p>id: ${objectElement.id}</p>
+                <p>${objectElement.name}</p>
+                <p>${objectElement.age}</p>
+            </div>
+        `);
+    }
+}
+let objects = [
+                {id: 0001, name: 'Богдан', age: 40},
+                {id: 0002, name: 'Людмила', age: 39},
+                {id: 0003, name: 'Назар', age: 12},
+                {id: 0004, name: 'Анастасія', age: 4},
+                {id: 0005, name: 'Мирослав', age: 3},
+];
+objectArray(objects);
