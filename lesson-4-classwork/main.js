@@ -124,7 +124,7 @@ arrayRandom (10);
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
 
 function arrayRandomLimit (light, limit) {
-    document.write (`<ul>Масив випадкових чисел:`);
+    document.write (`<ul>Масив випадкових чисел з лімітом:`);
     let array = [];
     for (let i = 0; i < light; i++) {
         array.push(Math.floor(Math.random() * limit));
@@ -138,13 +138,14 @@ arrayRandomLimit (10, 50);
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 
-// function arrayRevers (arrayOld) {
-//     let newArray = [];
-//     for (let i = arrayOld.length - 1, n = 0; i >= 0; i--, n++) {
-//         newArray[n] = arrayOld[i];
-//         document.write (`<p>${newArray[n]}</p>`);
-//     }
-// }
-//
-// arrayRevers (12, -50, 52, 750, 9, 185, 459, -75, 83);
-// document.write (`<p>Новий масив в зворотньому порядку <br>${newArray}</p>`);
+arrayRevers (12, -50, 52, 750, 9, 185, 459, -75, 83);
+
+function arrayRevers (arrayOld) {
+    // let newArray = [];
+    for (let i = arrayOld.length - 1, n = 0; i >= 0; i--, n++) {
+        newArray[n] = arrayOld[i];
+    }
+    return newArray;
+}
+
+console.log(newArray);
