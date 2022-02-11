@@ -83,22 +83,6 @@ document.write(`<div class="array"><p>Середнє арифметичне зн
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-// const minMax = (...arg) => {
-//     let min = arg[0];
-//     let max = arg[0];
-//     for (const element of arg) {
-//         if (element > max) {
-//             max = element;
-//         }
-//         if (element < min) {
-//             min = element;
-//         }
-//     }
-//     console.log("max ", max);
-//     return min;
-// }
-// document.write('Мінімальне число з введених: ' + minMax(-10, 10, -1000233, 734848734))
-
 let arrayMinMax = (array) => {
     let minA = array [0];
     let maxA = array [0];
@@ -114,10 +98,44 @@ let arrayMinMax = (array) => {
     return minA;
 }
 
-arrayMinMax ([15156, 546, 56232, -5663, 4646, 0, 46599]);
-document.write(`<div class="array"><p>Найменьше число масиву: </p><h3>${minA}</h3></div>`);
+document.write(`<div class="array"><p>Найменьше число масиву: </p><h3>${arrayMinMax([15156, 546, 56232, -5663, 4646, 0, 46599])}</h3></div>`);
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+
+let arrayRand = (light) => {
+    document.write (`<div class="array"><p>Масив випадкових чисел:</p>`);
+    let array = [];
+    for (let i = 0; i < light; i++) {
+        array.push(Math.floor(Math.random() * 100));
+        document.write (`<h4>${array[i]}</h4>`);
+    }
+    document.write (`</ul></div>`);
+}
+
+arrayRand (10);
+
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+
+let arrayRandom = (light, limit) => {
+    document.write (`<div class="array"><p>Масив випадкових чисел:</p>`);
+    let array = [];
+    for (let i = 0; i < light; i++) {
+        array.push(Math.floor(Math.random() * limit));
+        document.write (`<h4>${array[i]}</h4>`);
+    }
+    document.write (`</ul></div>`);
+}
+
+arrayRandom (5, 20);
+
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+
+let arrayRevers = (arrayOld) => {
+    let arrayNew = [];
+    for (let i = arrayOld.length - 1, n = 0; i >= 0; i--, n++) {
+        arrayNew[n] = arrayOld[i];}
+    return arrayNew;
+}
+
+console.log(arrayRevers ([11515, 65563, -844, -75, 4676, 955]));
