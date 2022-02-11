@@ -138,24 +138,22 @@ arrayRandomLimit (10, 50);
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 
-// let arrayOld = [(12, -50, 52, 750, 9, 185, 459, -75, 83)];
 // function arrayRevers (arrayOld) {
-//     let arrayOld = [];
+//     let arrayNew= [];
 //     let n = arrayOld.length - 1;
-//     for (let argument of arrayOld) {
-//         // console.log(argument);
+//     for (let element of arrayOld) {
+//         arrayNew[n] = argument;
 //         n--;
-//         arrayNeo[n] = argument;
 //     }
+//     return arrayNew;
 // }
-// console.log(arrayRevers);
+// console.log(arrayRevers ([10, 403, -54, 705, 76, 95]));
 
 function arrayRevers (arrayOld) {
     let arrayNew = [];
-    for (let i = arrayOld.light - 1, n = 0; i >= 0; i--, n++) {
+    for (let i = arrayOld.length - 1, n = 0; i >= 0; i--, n++) {
         arrayNew[n] = arrayOld[i];}
-    console.log(arrayNew);
-    // return arrayNew;
+    return arrayNew;
 }
 
-arrayRevers (10, 403, -54, 705, 76, 95);
+console.log(arrayRevers ([10, 403, -54, 705, 76, 95]));
