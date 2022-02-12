@@ -36,11 +36,32 @@ let strClean = str.trim().replaceAll('  ', '');
         "${str}"=>${strClean}.`);
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
-//     let str = 'Каждый охотник желает знать';
+// let str = 'Каждый охотник желает знать';
 // let arr = stringToarray(str);
 // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
 
+let stringToarray = (str, separator) => {
+    let arrayStr = str.split(separator);
+        console.log(`З стрінги створено массив з ${arrayStr.length} агументів: 
+            "${str}" =>
+            [${arrayStr.join(', ')}]`);
+    for (let i = 0; i < arrayStr.length; i++) {
+        console.log (`'${arrayStr[i]}'`);
+    }
+    return arrayStr;
+}
 
+stringToarray('Каждый охотник желает знать', ' ');
+document.writeln(`${arrayStr}`);
+
+// function splitString(stringToSplit, separator) {
+//     let arrayOfStrings = stringToSplit.split(separator);
+//     console.log('Оригинальная строка: "' + stringToSplit + '"');
+//     console.log('Разделитель: "' + separator + '"');
+//     console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
+// }
+//
+// splitString('Каждый охотник желает знать', ' ');
 
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
