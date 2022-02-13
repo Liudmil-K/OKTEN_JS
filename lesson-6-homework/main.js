@@ -12,7 +12,7 @@ let str3 = 'javascript is cool';
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 
-let strUp1 = str1.toUpperCase();
+let strUp1 = str1.toUpperCase(); //toUpperCase - toLowerCase
 let strUp2 = str2.toUpperCase();
 let strUp3 = str3.toUpperCase();
     console.log(`Змінимо всі літери на великий регістр:
@@ -30,53 +30,77 @@ let strUp3 = str3.toUpperCase();
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
-let str = ' dirty string   ';
-let strClean = str.trim().replaceAll('  ', '');
+let strDirty = ' dirty string   ';
+let strClean = strDirty.trim().replaceAll('  ', '');
     console.log(`Почистемо від зайвих пробілів:
-        "${str}"=>${strClean}.`);
+        "${strDirty}"=>${strClean}.`);
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 // let str = 'Каждый охотник желает знать';
 // let arr = stringToarray(str);
 // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
 
-let stringToarray = (str, separator) => {
-    let arrayStr = str.split(separator);
-        console.log(`З стрінги створено массив з ${arrayStr.length} агументів: 
-            "${str}" =>
-            [${arrayStr.join(', ')}]`);
-    for (let i = 0; i < arrayStr.length; i++) {
-        console.log (`'${arrayStr[i]}'`);
+let str = 'Каждый охотник желает знать';
+
+let stringToarray = (text, separator) => {
+    let arrayStrNew = [];
+    let arrayStr = text.split(separator); //розподільний знак
+    let j = arrayStr.length-1;
+        document.writeln(`<p>З стрінги "${text}" створено массив з ${arrayStr.length} агументів =></p><h3>[`);
+    for (let i = 0; i < j; i++) {
+        arrayStrNew[i] = arrayStr[i];
+        document.writeln (`'${arrayStr[i]}', `);
     }
+        document.writeln (`'${arrayStr[j]}' ]</h3>`);
+    arrayStrNew[j];
     return arrayStr;
 }
 
-stringToarray('Каждый охотник желает знать', ' ');
-document.writeln(`${arrayStr}`);
-
-// function splitString(stringToSplit, separator) {
-//     let arrayOfStrings = stringToSplit.split(separator);
-//     console.log('Оригинальная строка: "' + stringToSplit + '"');
-//     console.log('Разделитель: "' + separator + '"');
-//     console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
-// }
-//
-// splitString('Каждый охотник желает знать', ' ');
+stringToarray(str, ' ');
 
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
 // document.writeln(delete_characters(str, 7)); // Каждый
 
+let delete_characters = (text, length) => {
+    if ((typeof text === 'string') && (length>0)) {
+        return text.slice(0, length);
+    }
+};
 
+document.writeln('<p>Підрядок фрази виглядає, як =></p><h3>'+delete_characters(str, 7)+'</h3>');
 
-// - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+// - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами.
+// При цьому всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
 // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
 
+let insertDash = (find, replace, str) => {
+    while (str.indexOf(find) > 0) {
+        str = str.replace(find, replace); //(знайти, замінити, де)
+    }
+    let strUp = str.toUpperCase();
+    document.writeln(`<p>Змінемо текст ${str} замінивши "${find}" на "${replace}", 
+                    всі літери в ВЕРХНЬОМУ регістрі =></p><h3>${strUp}</h3>`);
+}
 
+insertDash(' ', '-', 'HTML JavaScript PHP');
 
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
 
+let upArgument = (argument) => {
+    let upFirst = argument.charAt(0).toUpperCase() + argument.slice(1);
+    document.writeln(`<p>Замінемо першу літеру тексту "${argument}" на прописну =></p><h3>${upFirst}</h3>`);
+    return upFirst;
+}
 
+upArgument('курси JS');
 
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+
+
+let capitalize = (strUp) => {
+    return strUp.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()}); //всі символи на початку без пробілів, та після пробілу і перевести в верхній регістр
+}
+
+document.writeln(`<p>Всі прописні літери =></p><h3>`+capitalize('кобзаренко людмила олександрівна')+`</h3>`);
