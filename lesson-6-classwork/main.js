@@ -51,7 +51,18 @@ console.log(array.map(x=> x+''));
 // sortNums('ascending') // [3,11,21]
 // sortNums('descending') // [21,11,3]
 
+let nums = [11,21,3];
+let sortNums = direction => {
+    if (direction === '>') {
+        nums.sort((a, b)=>{return a - b});
+    } else {
+        nums.sort((a, b)=>{return b - a});
+    }
+    return nums;
+}
 
+sortNums ('>');
+console.log(`Відсортуємо масив =>${nums}`);
 
 // - є масив
 // let coursesAndDurationArray = [
@@ -63,4 +74,18 @@ console.log(array.map(x=> x+''));
 //     {title: 'Frontend', monthDuration: 4}
 // ];
 // -- відсортувати його за спаданням за monthDuration
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+console.log(coursesAndDurationArray.sort((a, b) => {return a.monthDuration - b.monthDuration}));
+
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+
+console.log(coursesAndDurationArray.filter((a) => {return a.monthDuration >5}));
