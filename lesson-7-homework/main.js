@@ -43,19 +43,16 @@ class Client {
 }
 
 let arrayClient = [
-    new Client(4583, 'Liga', 'Giga', 'sg@gmail.com', 30668111585, ['book', 'game', 'ps4']),
-    new Client(5656, 'Smeha', 'Rony', 'oli@gmail.com', 30685416148, ['magasine', 'shop', 'ps3']),
-    new Client(7923, 'Zipko', 'Tevez', 'zeru@gmail.com', 30994645496, ['football', 'ps5']),
-    new Client(4664, 'Study', 'Olivie', 'kosmos@gmail.com', 30675656598, ['hobbis']),
-    new Client(4583, 'Liga', 'Giga', 'sg@gmail.com', 30506564544, ['book', 'game', 'ps4']),
-    new Client(4463, 'Smeha', 'Rony', 'oli@gmail.com', 30689965652, ['magasine', 'shop', 'ps3']),
-    new Client(9565, 'Zipko', 'Tevez', 'zeru@gmail.com', 30680000003, ['football', 'ps5']),
-    new Client(5454, 'Study', 'Olivie', 'kosmos@gmail.com', 30684656888, ['hobbis']),
-    new Client(4545, 'Liga', 'Giga', 'sg@gmail.com', 30680000001, ['book', 'game', 'ps4']),
-    new Client(5464, 'Smeha', 'Rony', 'oli@gmail.com', 30680000002, ['magasine', 'shop', 'ps3']),
+    new Client(4583, 'Христина', 'Олива', 'ho@gmail.com', 30668111585, ['Один', 1, 'one']),
+    new Client(5656, 'Ольга', 'Слива', 'os@gmail.com', 30685416148, ['Два', 2, 'two']),
+    new Client(7923, 'Антон', 'Шустак', 'ash@gmail.com', 30994645496, ['Три', 3, 'three']),
+    new Client(4664, 'Сергій', 'Крафт', 'sk@gmail.com', 30675656598, ['Чотири', 4, 'four']),
+    new Client(4583, 'Мирон', 'Вінський', 'mv@gmail.com', 30506564544, ['Пять', 5, 'five']),
+    new Client(4463, 'Людмила', 'Жданова', 'lgd@gmail.com', 30689965652, ['Шість', 6, 'six']),
+    new Client(9565, 'Давид', 'Маркович', 'dm@gmail.com', 30569595594, ['Сім', 7, 'seven']),
+    new Client(5454, 'Олеся', 'Давиденко', 'od@gmail.com', 304465658888, ['Вісім', 8, 'eight']),
+    new Client(4545, 'Дарина', 'Литвинчук', 'uj7@gmail.com', 30994544545, ['Девять', 9, 'nine']),
+    new Client(5464, 'Олег', 'Стеценко', 'uj7@gmail.com', 30500540002, ['Десять', 10, 'ten']),
 ];
 
-console.log(arrayClient);
-
-let sortCLients = arrayClient.sort((a, b) => a.order.length - b.order.length);
-console.log(sortCLients)
+console.log(arrayClient.sort((a, b) => a.order.length - b.order.length))
