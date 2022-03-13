@@ -14,19 +14,6 @@ div.style = `background-color: yellow;
 document.body.append (div);
 document.body.append (div.cloneNode (true));
 
-// - Є масив:
-//     ['Main','Products','About us','Contacts']
-// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
-// Завдання робити через цикли.
-
-let menuItems = ['Main', 'Products', 'About us', 'Contacts'];
-let menu = document.getElementsByClassName ('menu')[0];
-    for (const item of menuItems) {
-        let li = document.createElement('li');
-        li.innerText = item;
-        menu.appendChild(li);
-    }
-
 // - Є масив
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
