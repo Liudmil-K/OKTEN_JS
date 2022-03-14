@@ -36,3 +36,22 @@ let comments = [
     {title: 'HTML', body: 'Пройдений матеріал з 10.01 до 21.01. Мікропроет до 30.01'},
     {title: 'JS', body: 'Вивчення матеріалу з 31.01 до 20.03.'},
 ];
+
+let divParent = document.createElement('div');
+for (const item of comments) {
+    let divBlock = document.createElement('div');
+    let h2Block = document.createElement('h2');
+    let pBlock = document.createElement('p');
+    let btnHide = document.createElement('button');
+
+    h2Block.innerText = item.title;
+    pBlock.innerHTML = item.body;
+    btnHide.innerHTML = 'Приховати';
+
+    divBlock.append(h2Block, pBlock, btnHide);
+    divParent.append (divBlock);
+    btnHide.onclick = function ()  {
+        pBlock.classList.add('pHide').hidden = false;
+    }
+}
+document.body.appendChild(divParent);
